@@ -49,7 +49,7 @@ func (p *Percentile) Value() float64 {
 }
 
 // AddSample adds a single float64 sample to the data set.
-// It is not thread-safe, and not be called concurrently.
+// It is not thread-safe, and must not be called in parallel.
 func (p *Percentile) AddSample(sample float64) {
 	p.samples++
 
